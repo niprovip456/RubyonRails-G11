@@ -1,0 +1,15 @@
+<h1>Login</h1>
+
+<%= form_with url: session_path, method: :post, html: { class: "form" } do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <div id="flash_messages">
+    <% flash.each do |key, value| %>
+      <div class="flash <%= key %>"><%= value %></div>
+    <% end %>
+  </div>
+  <%= f.submit "Log in", class: "button" %>
+<% end %>

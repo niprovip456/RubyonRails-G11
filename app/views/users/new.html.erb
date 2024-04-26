@@ -1,0 +1,20 @@
+  <h1>Sign Up</h1>
+
+  <%= form_with model: @user, url: users_path, method: :post, html: { class: "form" } do |f| %>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+
+    <div id="flash_messages">
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+      <% end %>
+    </div>
+
+    <%= f.submit "Sign up", class: "button" %>
+  <% end %>

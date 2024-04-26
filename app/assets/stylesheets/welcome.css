@@ -1,0 +1,27 @@
+/* Định dạng cho tiêu đề h1 */
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Định dạng cho nút hoặc liên kết */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Định dạng cho nút hoặc liên kết khi rê chuột qua */
+.button:hover {
+  background-color: #0056b3;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
+}
